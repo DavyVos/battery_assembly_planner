@@ -20,6 +20,13 @@ ament_target_dependencies(
   "moveit_ros_planning_interface"
   "rclcpp"
 )
+find_package(moveit_visual_tools REQUIRED)
+ament_target_dependencies(
+  battery_assembly
+  "moveit_ros_planning_interface"
+  "moveit_visual_tools"
+  "rclcpp"
+)
 
 install(TARGETS battery_assembly
   DESTINATION lib/${PROJECT_NAME})
