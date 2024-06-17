@@ -1,0 +1,105 @@
+[0.128s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--mixin', 'debug']
+[0.129s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DCMAKE_BUILD_TYPE=Debug'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=['debug'], verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73538d149e40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73538d1497e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73538d1497e0>>, mixin_verb=('build',))
+[2.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.007s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.007s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/davy/ws_moveit2/src/battery_assembly_planner'
+[2.007s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.007s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.022s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'battery_assembly_planner'
+[2.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.055s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.055s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.079s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 341 installed packages in /opt/ros/humble
+[2.082s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Debug']'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'cmake_target' from command line to 'None'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'cmake_clean_first' from command line to 'False'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'cmake_force_configure' from command line to 'False'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'ament_cmake_args' from command line to 'None'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[2.134s] Level 5:colcon.colcon_core.verb:set package 'battery_assembly_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.134s] DEBUG:colcon.colcon_core.verb:Building package 'battery_assembly_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Debug'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner', 'merge_install': False, 'path': '/home/davy/ws_moveit2/src/battery_assembly_planner', 'symlink_install': False, 'test_result_base': None}
+[2.134s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.135s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.135s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/davy/ws_moveit2/src/battery_assembly_planner' with build type 'ament_cmake'
+[2.135s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/davy/ws_moveit2/src/battery_assembly_planner'
+[2.137s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.138s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.138s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.146s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/davy/ws_moveit2/src/battery_assembly_planner -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner
+[12.182s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/davy/ws_moveit2/src/battery_assembly_planner -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner
+[12.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner -- -j8 -l8
+[33.103s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner -- -j8 -l8
+[33.143s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner
+[33.163s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(battery_assembly_planner)
+[33.163s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner
+[33.166s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner' for CMake module files
+[33.166s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner' for CMake config files
+[33.166s] Level 1:colcon.colcon_core.shell:create_environment_hook('battery_assembly_planner', 'cmake_prefix_path')
+[33.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/hook/cmake_prefix_path.ps1'
+[33.172s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/hook/cmake_prefix_path.dsv'
+[33.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/hook/cmake_prefix_path.sh'
+[33.193s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib'
+[33.194s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/bin'
+[33.195s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib/pkgconfig/battery_assembly_planner.pc'
+[33.196s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib/python3.10/site-packages'
+[33.196s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/bin'
+[33.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.ps1'
+[33.201s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.dsv'
+[33.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.sh'
+[33.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.bash'
+[33.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.zsh'
+[33.212s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/colcon-core/packages/battery_assembly_planner)
+[33.283s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(battery_assembly_planner)
+[33.284s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner' for CMake module files
+[33.285s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner' for CMake config files
+[33.285s] Level 1:colcon.colcon_core.shell:create_environment_hook('battery_assembly_planner', 'cmake_prefix_path')
+[33.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/hook/cmake_prefix_path.ps1'
+[33.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/hook/cmake_prefix_path.dsv'
+[33.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/hook/cmake_prefix_path.sh'
+[33.288s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib'
+[33.288s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/bin'
+[33.288s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib/pkgconfig/battery_assembly_planner.pc'
+[33.289s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib/python3.10/site-packages'
+[33.289s] Level 1:colcon.colcon_core.environment:checking '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/bin'
+[33.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.ps1'
+[33.290s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.dsv'
+[33.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.sh'
+[33.292s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.bash'
+[33.293s] INFO:colcon.colcon_core.shell:Creating package script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.zsh'
+[33.294s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/colcon-core/packages/battery_assembly_planner)
+[33.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[33.295s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[33.295s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[33.295s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[33.306s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[33.306s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[33.306s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[33.324s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[33.324s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/local_setup.ps1'
+[33.326s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/davy/ws_moveit2/src/battery_assembly_planner/install/_local_setup_util_ps1.py'
+[33.328s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/setup.ps1'
+[33.329s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/local_setup.sh'
+[33.330s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/davy/ws_moveit2/src/battery_assembly_planner/install/_local_setup_util_sh.py'
+[33.330s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/setup.sh'
+[33.331s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/local_setup.bash'
+[33.332s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/setup.bash'
+[33.333s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/local_setup.zsh'
+[33.334s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davy/ws_moveit2/src/battery_assembly_planner/install/setup.zsh'

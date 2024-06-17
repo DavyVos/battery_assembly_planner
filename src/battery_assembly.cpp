@@ -23,12 +23,13 @@ int main(int argc, char *argv[])
                              { executor.spin(); });
 
   // Create the MoveIt MoveGroup Interface
+  static const std::string PLANNING_GROUP = "ur_manipulator";
   using moveit::planning_interface::MoveGroupInterface;
-  auto move_group_interface = MoveGroupInterface(node, "ur5e");
+  auto move_group_interface = MoveGroupInterface(node, PLANNING_GROUP);
 
   // Construct and initialize MoveItVisualTools
   auto moveit_visual_tools = moveit_visual_tools::MoveItVisualTools{
-      node, "panda_link0", rviz_visual_tools::RVIZ_MARKER_TOPIC,
+      node, "base_link", rviz_visual_tools::RVIZ_MARKER_TOPIC,
       move_group_interface.getRobotModel()};
   moveit_visual_tools.deleteAllMarkers();
   moveit_visual_tools.loadRemoteControl();

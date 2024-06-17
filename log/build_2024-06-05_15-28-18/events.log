@@ -1,0 +1,383 @@
+[0.000000] (-) TimerEvent: {}
+[0.000116] (battery_assembly_planner) JobQueued: {'identifier': 'battery_assembly_planner', 'dependencies': OrderedDict()}
+[0.000151] (battery_assembly_planner) JobStarted: {'identifier': 'battery_assembly_planner'}
+[0.007275] (battery_assembly_planner) JobProgress: {'identifier': 'battery_assembly_planner', 'progress': 'cmake'}
+[0.008636] (battery_assembly_planner) Command: {'cmd': ['/usr/bin/cmake', '/home/davy/ws_moveit2/src/battery_assembly_planner', '-DCMAKE_BUILD_TYPE=Debug', '-DCMAKE_INSTALL_PREFIX=/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner'], 'cwd': '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'davy'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/davy'), ('OLDPWD', '/home/davy/ws_moveit2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2493'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'davy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'davy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davy-HP-Laptop-15-bs1xx:@/tmp/.ICE-unix/1878,unix/davy-HP-Laptop-15-bs1xx:/tmp/.ICE-unix/1878'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0b73f966_d43f_4379_b5ac_b381feccd889'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XZHWO2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.091901] (battery_assembly_planner) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099438] (-) TimerEvent: {}
+[0.200109] (-) TimerEvent: {}
+[0.300911] (-) TimerEvent: {}
+[0.401362] (-) TimerEvent: {}
+[0.502091] (-) TimerEvent: {}
+[0.573622] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.602435] (-) TimerEvent: {}
+[0.703071] (-) TimerEvent: {}
+[0.803516] (-) TimerEvent: {}
+[0.904471] (-) TimerEvent: {}
+[0.919563] (battery_assembly_planner) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.5.5 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)\n'}
+[1.004747] (-) TimerEvent: {}
+[1.105560] (-) TimerEvent: {}
+[1.206288] (-) TimerEvent: {}
+[1.306733] (-) TimerEvent: {}
+[1.407500] (-) TimerEvent: {}
+[1.508180] (-) TimerEvent: {}
+[1.608717] (-) TimerEvent: {}
+[1.695108] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread \n'}
+[1.708973] (-) TimerEvent: {}
+[1.809666] (-) TimerEvent: {}
+[1.910319] (-) TimerEvent: {}
+[2.010782] (-) TimerEvent: {}
+[2.110740] (battery_assembly_planner) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.111173] (-) TimerEvent: {}
+[2.151993] (battery_assembly_planner) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.211433] (-) TimerEvent: {}
+[2.237725] (battery_assembly_planner) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.310520] (battery_assembly_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.311544] (-) TimerEvent: {}
+[2.411907] (-) TimerEvent: {}
+[2.430070] (battery_assembly_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.512039] (-) TimerEvent: {}
+[2.612345] (-) TimerEvent: {}
+[2.712819] (-) TimerEvent: {}
+[2.813441] (-) TimerEvent: {}
+[2.913746] (-) TimerEvent: {}
+[3.014219] (-) TimerEvent: {}
+[3.114521] (-) TimerEvent: {}
+[3.214854] (-) TimerEvent: {}
+[3.315155] (-) TimerEvent: {}
+[3.415454] (-) TimerEvent: {}
+[3.515748] (-) TimerEvent: {}
+[3.616041] (-) TimerEvent: {}
+[3.716340] (-) TimerEvent: {}
+[3.816664] (-) TimerEvent: {}
+[3.882333] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[3.916888] (-) TimerEvent: {}
+[4.017709] (-) TimerEvent: {}
+[4.118123] (battery_assembly_planner) StdoutLine: {'line': b'-- Found parameter_traits: 0.3.8 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[4.118679] (-) TimerEvent: {}
+[4.219298] (-) TimerEvent: {}
+[4.320300] (-) TimerEvent: {}
+[4.421095] (-) TimerEvent: {}
+[4.521788] (-) TimerEvent: {}
+[4.622248] (-) TimerEvent: {}
+[4.684333] (battery_assembly_planner) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[4.722500] (-) TimerEvent: {}
+[4.739124] (battery_assembly_planner) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.822659] (-) TimerEvent: {}
+[4.923057] (-) TimerEvent: {}
+[5.023678] (-) TimerEvent: {}
+[5.124135] (-) TimerEvent: {}
+[5.178372] (battery_assembly_planner) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[5.224345] (-) TimerEvent: {}
+[5.270961] (battery_assembly_planner) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.324467] (-) TimerEvent: {}
+[5.332780] (battery_assembly_planner) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.408409] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.424697] (-) TimerEvent: {}
+[5.525458] (-) TimerEvent: {}
+[5.625720] (-) TimerEvent: {}
+[5.726064] (-) TimerEvent: {}
+[5.772425] (battery_assembly_planner) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.9 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[5.826223] (-) TimerEvent: {}
+[5.926594] (-) TimerEvent: {}
+[5.940627] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[6.026862] (-) TimerEvent: {}
+[6.127509] (-) TimerEvent: {}
+[6.227916] (-) TimerEvent: {}
+[6.288517] (battery_assembly_planner) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[6.328185] (-) TimerEvent: {}
+[6.428786] (-) TimerEvent: {}
+[6.529097] (-) TimerEvent: {}
+[6.629517] (-) TimerEvent: {}
+[6.635800] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[6.636453] (battery_assembly_planner) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[6.729662] (-) TimerEvent: {}
+[6.830019] (-) TimerEvent: {}
+[6.930609] (-) TimerEvent: {}
+[7.030913] (-) TimerEvent: {}
+[7.131337] (-) TimerEvent: {}
+[7.231938] (-) TimerEvent: {}
+[7.332545] (-) TimerEvent: {}
+[7.432978] (-) TimerEvent: {}
+[7.533776] (-) TimerEvent: {}
+[7.634098] (-) TimerEvent: {}
+[7.712452] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[7.734238] (-) TimerEvent: {}
+[7.834536] (-) TimerEvent: {}
+[7.934835] (-) TimerEvent: {}
+[8.035140] (-) TimerEvent: {}
+[8.135438] (-) TimerEvent: {}
+[8.235740] (-) TimerEvent: {}
+[8.336038] (-) TimerEvent: {}
+[8.436438] (-) TimerEvent: {}
+[8.441602] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options \n'}
+[8.536569] (-) TimerEvent: {}
+[8.636870] (-) TimerEvent: {}
+[8.737172] (-) TimerEvent: {}
+[8.789417] (battery_assembly_planner) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread \n'}
+[8.837314] (-) TimerEvent: {}
+[8.937618] (-) TimerEvent: {}
+[9.037917] (-) TimerEvent: {}
+[9.138224] (-) TimerEvent: {}
+[9.238535] (-) TimerEvent: {}
+[9.338994] (-) TimerEvent: {}
+[9.351230] (battery_assembly_planner) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[9.439144] (-) TimerEvent: {}
+[9.539589] (-) TimerEvent: {}
+[9.608247] (battery_assembly_planner) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[9.608781] (battery_assembly_planner) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/davy/ws_moveit2/src/battery_assembly_planner/include>\n'}
+[9.609088] (battery_assembly_planner) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[9.612655] (battery_assembly_planner) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[9.617631] (battery_assembly_planner) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[9.620189] (battery_assembly_planner) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[9.632669] (battery_assembly_planner) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[9.632837] (battery_assembly_planner) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[9.634748] (battery_assembly_planner) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.639647] (-) TimerEvent: {}
+[9.649690] (battery_assembly_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.739987] (-) TimerEvent: {}
+[9.840790] (-) TimerEvent: {}
+[9.942092] (-) TimerEvent: {}
+[10.022452] (battery_assembly_planner) StdoutLine: {'line': b'-- Generating done\n'}
+[10.029201] (battery_assembly_planner) StdoutLine: {'line': b'-- Build files have been written to: /home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner\n'}
+[10.042203] (-) TimerEvent: {}
+[10.045750] (battery_assembly_planner) CommandEnded: {'returncode': 0}
+[10.046496] (battery_assembly_planner) JobProgress: {'identifier': 'battery_assembly_planner', 'progress': 'build'}
+[10.048220] (battery_assembly_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner', '--', '-j8', '-l8'], 'cwd': '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'davy'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/davy'), ('OLDPWD', '/home/davy/ws_moveit2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2493'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'davy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'davy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davy-HP-Laptop-15-bs1xx:@/tmp/.ICE-unix/1878,unix/davy-HP-Laptop-15-bs1xx:/tmp/.ICE-unix/1878'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0b73f966_d43f_4379_b5ac_b381feccd889'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XZHWO2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[10.112270] (battery_assembly_planner) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/battery_assembly.dir/src/battery_assembly.cpp.o\x1b[0m\n'}
+[10.142452] (-) TimerEvent: {}
+[10.243313] (-) TimerEvent: {}
+[10.344119] (-) TimerEvent: {}
+[10.444987] (-) TimerEvent: {}
+[10.545825] (-) TimerEvent: {}
+[10.646725] (-) TimerEvent: {}
+[10.747579] (-) TimerEvent: {}
+[10.848093] (-) TimerEvent: {}
+[10.948774] (-) TimerEvent: {}
+[11.049505] (-) TimerEvent: {}
+[11.150218] (-) TimerEvent: {}
+[11.250698] (-) TimerEvent: {}
+[11.351387] (-) TimerEvent: {}
+[11.452083] (-) TimerEvent: {}
+[11.552801] (-) TimerEvent: {}
+[11.653573] (-) TimerEvent: {}
+[11.754284] (-) TimerEvent: {}
+[11.855126] (-) TimerEvent: {}
+[11.956243] (-) TimerEvent: {}
+[12.056986] (-) TimerEvent: {}
+[12.157675] (-) TimerEvent: {}
+[12.258223] (-) TimerEvent: {}
+[12.358735] (-) TimerEvent: {}
+[12.459291] (-) TimerEvent: {}
+[12.559961] (-) TimerEvent: {}
+[12.660582] (-) TimerEvent: {}
+[12.761313] (-) TimerEvent: {}
+[12.862170] (-) TimerEvent: {}
+[12.962994] (-) TimerEvent: {}
+[13.063937] (-) TimerEvent: {}
+[13.164724] (-) TimerEvent: {}
+[13.265911] (-) TimerEvent: {}
+[13.366629] (-) TimerEvent: {}
+[13.467432] (-) TimerEvent: {}
+[13.568287] (-) TimerEvent: {}
+[13.669012] (-) TimerEvent: {}
+[13.770116] (-) TimerEvent: {}
+[13.870818] (-) TimerEvent: {}
+[13.971781] (-) TimerEvent: {}
+[14.072528] (-) TimerEvent: {}
+[14.173134] (-) TimerEvent: {}
+[14.273586] (-) TimerEvent: {}
+[14.374309] (-) TimerEvent: {}
+[14.475195] (-) TimerEvent: {}
+[14.576123] (-) TimerEvent: {}
+[14.677075] (-) TimerEvent: {}
+[14.777848] (-) TimerEvent: {}
+[14.878568] (-) TimerEvent: {}
+[14.979301] (-) TimerEvent: {}
+[15.080098] (-) TimerEvent: {}
+[15.180996] (-) TimerEvent: {}
+[15.281838] (-) TimerEvent: {}
+[15.382781] (-) TimerEvent: {}
+[15.483759] (-) TimerEvent: {}
+[15.584494] (-) TimerEvent: {}
+[15.685330] (-) TimerEvent: {}
+[15.786172] (-) TimerEvent: {}
+[15.887210] (-) TimerEvent: {}
+[15.988117] (-) TimerEvent: {}
+[16.088896] (-) TimerEvent: {}
+[16.189646] (-) TimerEvent: {}
+[16.290256] (-) TimerEvent: {}
+[16.390727] (-) TimerEvent: {}
+[16.491736] (-) TimerEvent: {}
+[16.592473] (-) TimerEvent: {}
+[16.693021] (-) TimerEvent: {}
+[16.793448] (-) TimerEvent: {}
+[16.894263] (-) TimerEvent: {}
+[16.995008] (-) TimerEvent: {}
+[17.095666] (-) TimerEvent: {}
+[17.196243] (-) TimerEvent: {}
+[17.296966] (-) TimerEvent: {}
+[17.397613] (-) TimerEvent: {}
+[17.498139] (-) TimerEvent: {}
+[17.598935] (-) TimerEvent: {}
+[17.699682] (-) TimerEvent: {}
+[17.800339] (-) TimerEvent: {}
+[17.900945] (-) TimerEvent: {}
+[18.002121] (-) TimerEvent: {}
+[18.102858] (-) TimerEvent: {}
+[18.203600] (-) TimerEvent: {}
+[18.304054] (-) TimerEvent: {}
+[18.404590] (-) TimerEvent: {}
+[18.505386] (-) TimerEvent: {}
+[18.606150] (-) TimerEvent: {}
+[18.707025] (-) TimerEvent: {}
+[18.807777] (-) TimerEvent: {}
+[18.908537] (-) TimerEvent: {}
+[19.009149] (-) TimerEvent: {}
+[19.110001] (-) TimerEvent: {}
+[19.210337] (-) TimerEvent: {}
+[19.310653] (-) TimerEvent: {}
+[19.410970] (-) TimerEvent: {}
+[19.511280] (-) TimerEvent: {}
+[19.611588] (-) TimerEvent: {}
+[19.711883] (-) TimerEvent: {}
+[19.812204] (-) TimerEvent: {}
+[19.912521] (-) TimerEvent: {}
+[20.012845] (-) TimerEvent: {}
+[20.113171] (-) TimerEvent: {}
+[20.213502] (-) TimerEvent: {}
+[20.313841] (-) TimerEvent: {}
+[20.414153] (-) TimerEvent: {}
+[20.514708] (-) TimerEvent: {}
+[20.615048] (-) TimerEvent: {}
+[20.715400] (-) TimerEvent: {}
+[20.815733] (-) TimerEvent: {}
+[20.916054] (-) TimerEvent: {}
+[21.016374] (-) TimerEvent: {}
+[21.116695] (-) TimerEvent: {}
+[21.217029] (-) TimerEvent: {}
+[21.317348] (-) TimerEvent: {}
+[21.417697] (-) TimerEvent: {}
+[21.518014] (-) TimerEvent: {}
+[21.618336] (-) TimerEvent: {}
+[21.718652] (-) TimerEvent: {}
+[21.818976] (-) TimerEvent: {}
+[21.919329] (-) TimerEvent: {}
+[22.019686] (-) TimerEvent: {}
+[22.120041] (-) TimerEvent: {}
+[22.220398] (-) TimerEvent: {}
+[22.320908] (-) TimerEvent: {}
+[22.421225] (-) TimerEvent: {}
+[22.521545] (-) TimerEvent: {}
+[22.621857] (-) TimerEvent: {}
+[22.722166] (-) TimerEvent: {}
+[22.822481] (-) TimerEvent: {}
+[22.922807] (-) TimerEvent: {}
+[23.023126] (-) TimerEvent: {}
+[23.123454] (-) TimerEvent: {}
+[23.223793] (-) TimerEvent: {}
+[23.324114] (-) TimerEvent: {}
+[23.424433] (-) TimerEvent: {}
+[23.524747] (-) TimerEvent: {}
+[23.625058] (-) TimerEvent: {}
+[23.725327] (-) TimerEvent: {}
+[23.825663] (-) TimerEvent: {}
+[23.925980] (-) TimerEvent: {}
+[24.026310] (-) TimerEvent: {}
+[24.126655] (-) TimerEvent: {}
+[24.226973] (-) TimerEvent: {}
+[24.327295] (-) TimerEvent: {}
+[24.427612] (-) TimerEvent: {}
+[24.527921] (-) TimerEvent: {}
+[24.628230] (-) TimerEvent: {}
+[24.728548] (-) TimerEvent: {}
+[24.828864] (-) TimerEvent: {}
+[24.929206] (-) TimerEvent: {}
+[25.029520] (-) TimerEvent: {}
+[25.129845] (-) TimerEvent: {}
+[25.230165] (-) TimerEvent: {}
+[25.330515] (-) TimerEvent: {}
+[25.430880] (-) TimerEvent: {}
+[25.531240] (-) TimerEvent: {}
+[25.631602] (-) TimerEvent: {}
+[25.731960] (-) TimerEvent: {}
+[25.832338] (-) TimerEvent: {}
+[25.932724] (-) TimerEvent: {}
+[26.033057] (-) TimerEvent: {}
+[26.133385] (-) TimerEvent: {}
+[26.233724] (-) TimerEvent: {}
+[26.334040] (-) TimerEvent: {}
+[26.434366] (-) TimerEvent: {}
+[26.534687] (-) TimerEvent: {}
+[26.635009] (-) TimerEvent: {}
+[26.735340] (-) TimerEvent: {}
+[26.835660] (-) TimerEvent: {}
+[26.935988] (-) TimerEvent: {}
+[27.036336] (-) TimerEvent: {}
+[27.136667] (-) TimerEvent: {}
+[27.237000] (-) TimerEvent: {}
+[27.337344] (-) TimerEvent: {}
+[27.437710] (-) TimerEvent: {}
+[27.538058] (-) TimerEvent: {}
+[27.638402] (-) TimerEvent: {}
+[27.738759] (-) TimerEvent: {}
+[27.839103] (-) TimerEvent: {}
+[27.939801] (-) TimerEvent: {}
+[28.040152] (-) TimerEvent: {}
+[28.140488] (-) TimerEvent: {}
+[28.241062] (-) TimerEvent: {}
+[28.341586] (-) TimerEvent: {}
+[28.441910] (-) TimerEvent: {}
+[28.542221] (-) TimerEvent: {}
+[28.544296] (battery_assembly_planner) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable battery_assembly\x1b[0m\n'}
+[28.642485] (-) TimerEvent: {}
+[28.743285] (-) TimerEvent: {}
+[28.844416] (-) TimerEvent: {}
+[28.945206] (-) TimerEvent: {}
+[29.045953] (-) TimerEvent: {}
+[29.146690] (-) TimerEvent: {}
+[29.247461] (-) TimerEvent: {}
+[29.348225] (-) TimerEvent: {}
+[29.449025] (-) TimerEvent: {}
+[29.549779] (-) TimerEvent: {}
+[29.650656] (-) TimerEvent: {}
+[29.751599] (-) TimerEvent: {}
+[29.852513] (-) TimerEvent: {}
+[29.953005] (-) TimerEvent: {}
+[30.053639] (-) TimerEvent: {}
+[30.154551] (-) TimerEvent: {}
+[30.255197] (-) TimerEvent: {}
+[30.355476] (-) TimerEvent: {}
+[30.455813] (-) TimerEvent: {}
+[30.556120] (-) TimerEvent: {}
+[30.656412] (-) TimerEvent: {}
+[30.756705] (-) TimerEvent: {}
+[30.856999] (-) TimerEvent: {}
+[30.954400] (battery_assembly_planner) StdoutLine: {'line': b'[100%] Built target battery_assembly\n'}
+[30.957117] (-) TimerEvent: {}
+[30.967098] (battery_assembly_planner) CommandEnded: {'returncode': 0}
+[30.997166] (battery_assembly_planner) JobProgress: {'identifier': 'battery_assembly_planner', 'progress': 'install'}
+[31.007629] (battery_assembly_planner) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner'], 'cwd': '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'davy'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/davy'), ('OLDPWD', '/home/davy/ws_moveit2/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2493'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'davy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'davy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davy-HP-Laptop-15-bs1xx:@/tmp/.ICE-unix/1878,unix/davy-HP-Laptop-15-bs1xx:/tmp/.ICE-unix/1878'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0b73f966_d43f_4379_b5ac_b381feccd889'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XZHWO2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/davy/ws_moveit2/src/battery_assembly_planner/build/battery_assembly_planner'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[31.015890] (battery_assembly_planner) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[31.016166] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib/battery_assembly_planner/battery_assembly\n'}
+[31.022168] (battery_assembly_planner) StdoutLine: {'line': b'-- Set runtime path of "/home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/lib/battery_assembly_planner/battery_assembly" to ""\n'}
+[31.022452] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/ament_index/resource_index/package_run_dependencies/battery_assembly_planner\n'}
+[31.022651] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/ament_index/resource_index/parent_prefix_path/battery_assembly_planner\n'}
+[31.022877] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/environment/ament_prefix_path.sh\n'}
+[31.023072] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/environment/ament_prefix_path.dsv\n'}
+[31.023278] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/environment/path.sh\n'}
+[31.023487] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/environment/path.dsv\n'}
+[31.023620] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/local_setup.bash\n'}
+[31.023746] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/local_setup.sh\n'}
+[31.023940] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/local_setup.zsh\n'}
+[31.024136] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/local_setup.dsv\n'}
+[31.024316] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.dsv\n'}
+[31.024596] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/ament_index/resource_index/packages/battery_assembly_planner\n'}
+[31.024827] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/cmake/battery_assembly_plannerConfig.cmake\n'}
+[31.025031] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/cmake/battery_assembly_plannerConfig-version.cmake\n'}
+[31.025231] (battery_assembly_planner) StdoutLine: {'line': b'-- Installing: /home/davy/ws_moveit2/src/battery_assembly_planner/install/battery_assembly_planner/share/battery_assembly_planner/package.xml\n'}
+[31.027664] (battery_assembly_planner) CommandEnded: {'returncode': 0}
+[31.057987] (-) TimerEvent: {}
+[31.158747] (battery_assembly_planner) JobEnded: {'identifier': 'battery_assembly_planner', 'rc': 0}
+[31.160281] (-) TimerEvent: {}
+[31.160456] (-) EventReactorShutdown: {}
