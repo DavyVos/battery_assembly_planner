@@ -3,6 +3,9 @@
 
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <geometry_msgs/msg/pose.hpp>
+#include <rclcpp/rclcpp.hpp>
+#include <chrono>
+#include <thread>
 
 bool createTwoStepPlan(moveit::planning_interface::MoveGroupInterface& move_group, const geometry_msgs::msg::Pose& target_pose);
 
