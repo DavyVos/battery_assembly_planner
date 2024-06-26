@@ -1,6 +1,6 @@
 #include "create_two_step_plan.h"
 
-bool createTwoStepPlan(const geometry_msgs::Pose& target_pose)
+bool createTwoStepPlan(const geometry_msgs::msg::Pose& target_pose)
 {
     // Setup
     static const std::string PLANNING_GROUP = "ur_manipulator";

@@ -1,9 +1,11 @@
 #ifndef CREATE_TWO_STEP_PLAN_H
 #define CREATE_TWO_STEP_PLAN_H
 
-#include <rclcpp/rclcpp.hpp>
 #include <moveit/move_group_interface/move_group_interface.h>
-#include <geometry_msgs/msg/pose.hpp>
+#include <moveit/planning_scene_interface/planning_scene_interface.h>
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+
 
 bool createTwoStepPlan(const geometry_msgs::msg::Pose& target_pose);
 
