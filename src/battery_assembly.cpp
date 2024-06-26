@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     return msg;
   }();
 
-  createTwoStepPlan(*move_group, target_pose);
+  bool success = createTwoStepPlan(*move_group, target_pose);
 
   // Shutdown ROS
   rclcpp::shutdown();

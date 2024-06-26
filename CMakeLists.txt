@@ -17,6 +17,7 @@ find_package(tf2_geometry_msgs REQUIRED)
 
 add_executable(battery_assembly
   src/battery_assembly.cpp
+  src/create_two_step_plan.cpp
 )
 
 target_include_directories(battery_assembly PUBLIC
