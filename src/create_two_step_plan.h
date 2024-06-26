@@ -5,6 +5,6 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <geometry_msgs/msg/pose.hpp>
 
-bool createTwoStepPlan(const rclcpp::Node::SharedPtr& node, const geometry_msgs::msg::Pose& target_pose);
+bool createTwoStepPlan(const geometry_msgs::msg::Pose& target_pose);
 
 #endif // CREATE_TWO_STEP_PLAN_H
