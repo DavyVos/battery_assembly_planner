@@ -4,6 +4,7 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit_visual_tools/moveit_visual_tools.h>
 #include <thread>
+#include "create_two_step_plan.h"
 
 int main(int argc, char *argv[])
 {
@@ -22,11 +23,6 @@ int main(int argc, char *argv[])
   auto spinner = std::thread([&executor]()
                              { executor.spin(); });
 
-  // Create the MoveIt MoveGroup Interface
-  static const std::string PLANNING_GROUP = "ur_manipulator";
-  using moveit::planning_interface::MoveGroupInterface;
-  auto move_group_interface = MoveGroupInterface(node, PLANNING_GROUP);
-
   // Construct and initialize MoveItVisualTools
   auto moveit_visual_tools = moveit_visual_tools::MoveItVisualTools{
       node, "base_link", rviz_visual_tools::RVIZ_MARKER_TOPIC,
@@ -44,25 +40,8 @@ int main(int argc, char *argv[])
     msg.position.z = 0.5;
     return msg;
   }();
-  move_group_interface.setPoseTarget(target_pose);
 
-  // Create a plan to that target pose
-  auto const [success, plan] = [&move_group_interface]
-  {
-    moveit::planning_interface::MoveGroupInterface::Plan msg;
-    auto const ok = static_cast<bool>(move_group_interface.plan(msg));
-    return std::make_pair(ok, msg);
-  }();
-
-  // Execute the plan
-  if (success)
-  {
-    move_group_interface.execute(plan);
-  }
-  else
-  {
-    RCLCPP_ERROR(logger, "Planing failed!");
-  }
+  createTwoStepPlan(target_pose);
 
   // Shutdown ROS
   rclcpp::shutdown(); // <--- This will cause the spin function in the thread to return
