@@ -1,13 +1,10 @@
 #include "create_two_step_plan.h"
+#include <rclcpp/rclcpp.hpp>
 
-bool createTwoStepPlan(const geometry_msgs::msg::Pose& target_pose)
+bool createTwoStepPlan(moveit::planning_interface::MoveGroupInterface& move_group, const geometry_msgs::msg::Pose& target_pose)
 {
-    // Setup
-    static const std::string PLANNING_GROUP = "ur_manipulator";
-    moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
-    
     // Step 1: Plan to pre-insertion pose
-    geometry_msgs::Pose pre_insertion_pose = target_pose;
+    geometry_msgs::msg::Pose pre_insertion_pose = target_pose;
     pre_insertion_pose.position.z += 0.1;  // Move 10cm above the target
     
     move_group.setPoseTarget(pre_insertion_pose);
@@ -16,7 +13,7 @@ bool createTwoStepPlan(const geometry_msgs::msg::Pose& target_pose)
     
     if (!success)
     {
-        ROS_ERROR("Planning to pre-insertion pose failed");
+        RCLCPP_ERROR(rclcpp::get_logger("create_two_step_plan"), "Planning to pre-insertion pose failed");
         return false;
     }
     
@@ -24,18 +21,18 @@ bool createTwoStepPlan(const geometry_msgs::msg::Pose& target_pose)
     move_group.execute(pre_insertion_plan);
     
     // Step 2: Straight line path to final insertion pose
-    std::vector<geometry_msgs::Pose> waypoints;
+    std::vector<geometry_msgs::msg::Pose> waypoints;
     waypoints.push_back(move_group.getCurrentPose().pose);  // Start from current pose
     waypoints.push_back(target_pose);  // End at target pose
     
-    moveit_msgs::RobotTrajectory trajectory;
+    moveit_msgs::msg::RobotTrajectory trajectory;
     const double jump_threshold = 0.0;
     const double eef_step = 0.01;  // 1cm resolution
     double fraction = move_group.computeCartesianPath(waypoints, eef_step, jump_threshold, trajectory);
     
     if (fraction < 0.95)  // Allow for small tolerance
     {
-        ROS_ERROR("Straight line path planning failed with only %f success", fraction);
+        RCLCPP_ERROR(rclcpp::get_logger("create_two_step_plan"), "Straight line path planning failed with only %f success", fraction);
         return false;
     }
     

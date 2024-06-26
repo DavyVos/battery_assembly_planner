@@ -1,5 +1,4 @@
 #include <memory>
-
 #include <rclcpp/rclcpp.hpp>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit_visual_tools/moveit_visual_tools.h>
@@ -14,6 +13,10 @@ int main(int argc, char *argv[])
       "battery_assembly",
       rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true));
 
+  // Setup
+  static const std::string PLANNING_GROUP = "ur_manipulator";
+  auto move_group = std::make_shared<moveit::planning_interface::MoveGroupInterface>(node, PLANNING_GROUP);
+
   // Create a ROS logger
   auto const logger = rclcpp::get_logger("battery_assembly");
 
@@ -26,7 +29,7 @@ int main(int argc, char *argv[])
   // Construct and initialize MoveItVisualTools
   auto moveit_visual_tools = moveit_visual_tools::MoveItVisualTools{
       node, "base_link", rviz_visual_tools::RVIZ_MARKER_TOPIC,
-      move_group_interface.getRobotModel()};
+      move_group->getRobotModel()};
   moveit_visual_tools.deleteAllMarkers();
   moveit_visual_tools.loadRemoteControl();
 
@@ -41,10 +44,10 @@ int main(int argc, char *argv[])
     return msg;
   }();
 
-  createTwoStepPlan(target_pose);
+  createTwoStepPlan(*move_group, target_pose);
 
   // Shutdown ROS
-  rclcpp::shutdown(); // <--- This will cause the spin function in the thread to return
-  spinner.join();     // <--- Join the thread before exiting
+  rclcpp::shutdown();
+  spinner.join();
   return 0;
 }
