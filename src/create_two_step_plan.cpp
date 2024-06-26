@@ -19,6 +19,12 @@ bool createTwoStepPlan(moveit::planning_interface::MoveGroupInterface& move_grou
     
     // Execute the pre-insertion plan
     move_group.execute(pre_insertion_plan);
+
+    double pause_duration = 10.0;
+
+    // Pause for the specified duration
+    RCLCPP_INFO(rclcpp::get_logger("create_two_step_plan"), "Pausing for %.1f seconds before insertion", pause_duration);
+    std::this_thread::sleep_for(std::chrono::duration<double>(pause_duration));
     
     // Step 2: Straight line path to final insertion pose
     std::vector<geometry_msgs::msg::Pose> waypoints;

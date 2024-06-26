@@ -33,14 +33,21 @@ int main(int argc, char *argv[])
   moveit_visual_tools.deleteAllMarkers();
   moveit_visual_tools.loadRemoteControl();
 
-  // Set a target Pose
+  // Set a target Pose with end-effector pointing downwards
   auto const target_pose = []
   {
     geometry_msgs::msg::Pose msg;
-    msg.orientation.w = 1.0;
+
+    // Set position
     msg.position.x = 0.28;
     msg.position.y = -0.2;
     msg.position.z = 0.5;
+
+    // Set orientation for pointing downwards
+    tf2::Quaternion q;
+    q.setRPY(-M_PI, 0, 0); // Roll: -pi (180 degrees around X-axis), Pitch: 0, Yaw: 0
+    msg.orientation = tf2::toMsg(q);
+
     return msg;
   }();
 
