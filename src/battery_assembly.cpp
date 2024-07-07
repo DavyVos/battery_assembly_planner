@@ -6,17 +6,18 @@
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include "create_two_step_plan.h"
-#include "battery_assembly_interfaces/srv/request_path_planning_Execution.hpp"
+#include "battery_assembly_interfaces/srv/request_path_planning_execution.hpp"
 
 
-geometry_msgs::Pose floatArrayToPose(const std::array<float, 16>& float_array) {
+//convert incoming matrix (16 length float array) to target pose
+geometry_msgs::msg::Pose floatArrayToPose(const std::array<double, 16>& double_array) {
     // Ensure the array has exactly 16 elements (already guaranteed by std::array)
 
     // Reshape the array into a 4x4 matrix
     Eigen::Matrix4f matrix;
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
-            matrix(i, j) = float_array[i * 4 + j];
+            matrix(i, j) = double_array[i * 4 + j];
         }
     }
 
@@ -30,7 +31,7 @@ geometry_msgs::Pose floatArrayToPose(const std::array<float, 16>& float_array) {
     Eigen::Quaternionf quaternion(rotation_matrix);
 
     // Create a Pose object
-    geometry_msgs::Pose pose;
+    geometry_msgs::msg::Pose pose;
     pose.position.x = position.x();
     pose.position.y = position.y();
     pose.position.z = position.z();
@@ -42,10 +43,36 @@ geometry_msgs::Pose floatArrayToPose(const std::array<float, 16>& float_array) {
     return pose;
 }
 
-void ExecutePlanning(const std::shared_ptr<battery_assembly_interfaces::srv::request_path_planning_Execution::Request> request,
-          std::shared_ptr<battery_assembly_interfaces::srv::request_path_planning_Execution::Response> response) 
+void ExecutePlanning(const std::shared_ptr<battery_assembly_interfaces::srv::RequestPathPlanningExecution::Request> request,
+          std::shared_ptr<battery_assembly_interfaces::srv::RequestPathPlanningExecution::Response> response,
+          std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group) 
 {
-  auto const targetPose = floatArrayToPose(request.transformation_matrix)
+  auto const targetPose = floatArrayToPose(request->transformation_matrix);
+
+  // Set a target Pose with end-effector pointing downwards
+  // auto const target_pose = []
+  // {
+  //   geometry_msgs::msg::Pose msg;
+
+  //   // Set position
+  //   msg.position.x = 0.28;
+  //   msg.position.y = -0.2;
+  //   msg.position.z = 0.5;
+
+  //   // Set orientation for pointing downwards
+  //   tf2::Quaternion q;
+  //   q.setRPY(-M_PI, 0, 0); // Roll: -pi (180 degrees around X-axis), Pitch: 0, Yaw: 0
+  //   msg.orientation = tf2::toMsg(q);
+
+  //   return msg;
+  // }();
+
+  // Capture the current (home) position
+  auto const home_pose = move_group->getCurrentPose().pose;
+
+  //Execute the planning and respond with failure or success
+  bool success = createTwoStepPlan(*move_group, targetPose);
+  response->success = success;
 }
 
 int main(int argc, char *argv[])
@@ -56,24 +83,27 @@ int main(int argc, char *argv[])
       "battery_assembly",
       rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true));
 
-  rclcpp::Service<example_interfaces::srv::AddTwoInts>::SharedPtr service =
-    node->create_service<example_interfaces::srv::AddTwoInts>("add_two_ints", &add);
-
-  RCLCPP_INFO(rclcpp::get_logger("battery_assembly"), "Ready to add two ints.");
-
-
   // Setup
   static const std::string PLANNING_GROUP = "ur_manipulator";
   auto move_group = std::make_shared<moveit::planning_interface::MoveGroupInterface>(node, PLANNING_GROUP);
 
+  // Create the lambda function that captures move_group
+  auto executePlanningCallback = [move_group](
+      const std::shared_ptr<battery_assembly_interfaces::srv::RequestPathPlanningExecution::Request> request,
+      std::shared_ptr<battery_assembly_interfaces::srv::RequestPathPlanningExecution::Response> response) {
+      ExecutePlanning(request, response, move_group);
+  };
+
+  // Create the service server using previously created lambda function
+  rclcpp::Service<battery_assembly_interfaces::srv::RequestPathPlanningExecution>::SharedPtr service =
+      node->create_service<battery_assembly_interfaces::srv::RequestPathPlanningExecution>(
+          "request_path_planning_execution",
+          executePlanningCallback);
+
+  RCLCPP_INFO(node->get_logger(), "Ready to execute path planning.");
+
   // Create a ROS logger
   auto const logger = rclcpp::get_logger("battery_assembly");
-
-  // We spin up a SingleThreadedExecutor so MoveItVisualTools interact with ROS
-  rclcpp::executors::SingleThreadedExecutor executor;
-  executor.add_node(node);
-  auto spinner = std::thread([&executor]()
-                             { executor.spin(); });
 
   // Construct and initialize MoveItVisualTools
   auto moveit_visual_tools = moveit_visual_tools::MoveItVisualTools{
@@ -82,31 +112,10 @@ int main(int argc, char *argv[])
   moveit_visual_tools.deleteAllMarkers();
   moveit_visual_tools.loadRemoteControl();
 
-  // Set a target Pose with end-effector pointing downwards
-  auto const target_pose = []
-  {
-    geometry_msgs::msg::Pose msg;
+  // Spin the node
+  rclcpp::spin(node);
 
-    // Set position
-    msg.position.x = 0.28;
-    msg.position.y = -0.2;
-    msg.position.z = 0.5;
-
-    // Set orientation for pointing downwards
-    tf2::Quaternion q;
-    q.setRPY(-M_PI, 0, 0); // Roll: -pi (180 degrees around X-axis), Pitch: 0, Yaw: 0
-    msg.orientation = tf2::toMsg(q);
-
-    return msg;
-  }();
-
-  // Capture the current (home) position
-  auto const home_pose = move_group->getCurrentPose().pose;
-
-  bool success = createTwoStepPlan(*move_group, target_pose);
-
-  // Shutdown ROS
+  // Shutdown ROS (this will only be reached if rclcpp::spin() is interrupted)
   rclcpp::shutdown();
-  spinner.join();
   return 0;
 }
