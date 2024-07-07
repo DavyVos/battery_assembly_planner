@@ -14,6 +14,7 @@ find_package(moveit_visual_tools REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+find_package(battery_assembly_interfaces REQUIRED)
 
 add_executable(battery_assembly
   src/battery_assembly.cpp
@@ -33,6 +34,7 @@ ament_target_dependencies(battery_assembly
   moveit_ros_planning_interface
   rclcpp
   moveit_visual_tools  # Add if necessary
+  battery_assembly_interfaces
 )
 
 install(TARGETS battery_assembly
